@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test-unit": "NODE_ENV=test mocha -r ts-node/register --check-leaks -t 1000 --recursive --exit 'tests/unit/**/*.test.ts'",
-    "test-integration": "NODE_ENV=test mocha -r ts-node/register --check-leaks -t 1000 --recursive --exit 'tests/integration/**/*.test.ts'"
+    "test-integration": "NODE_ENV=test mocha -r ts-node/register --check-leaks -t 30000 --recursive --exit 'tests/integration/**/*.test.ts'"
   },
   "author": "",
   "license": "ISC",
@@ -14,12 +14,13 @@
   },
   "devDependencies": {
     "@swc/core": "^1.3.46",
+    "@types/chai": "^4.3.4",
+    "chai": "^4.2.0",
+    "mocha": "10.2.0",
+    "mongodb-memory-server": "^8.12.2",
+    "mongoose": "^7.1.0",
     "ts-node": "^10.9.1",
     "tsconfig-paths": "^4.1.0",
-    "typescript": "^4.7.4",
-    "mocha": "10.2.0",
-    "chai": "^4.2.0",
-    "mongodb-memory-server": "^8.12.2",
-    "mongoose": "^7.1.0"
+    "typescript": "^4.7.4"
   }
 }

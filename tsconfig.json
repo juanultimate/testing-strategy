@@ -1,0 +1,45 @@
+{
+  "ts-node": {
+    "swc": true,
+    "transpileOnly": true,
+    "require": ["tsconfig-paths/register"]
+  },
+  "compilerOptions": {
+    "baseUrl": ".",
+    "target": "ES2017",
+    "module": "CommonJS",
+    "allowJs": true,
+    "outDir": "dist",
+    "moduleResolution": "node",
+    "lib": ["ES2020"],
+    "declaration": false,
+    "strict": true,
+    "types": ["node", "mocha"],
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "skipLibCheck": true,
+    "incremental": true,
+    "forceConsistentCasingInFileNames": true,
+    "sourceMap": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "paths": {
+      "igloo/*": ["./app/igloo/*"],
+      "models": ["./app/models/index.js"],
+      "models/*": ["./app/models/*"],
+      "controllers/*": ["./app/controllers/*"],
+      "repositories": ["./app/repositories/index.js"],
+      "repositories/*": ["./app/repositories/*"],
+      "components/*": ["./app/components/*"],
+      "api/*": ["./app/controllers/api/*"],
+      "lib/*": ["./app/lib/*"],
+      "es-mappings/*": ["./elastic-search-mappings/*"],
+      "boot/*": ["./boot/*"],
+      "app": ["./app.js"],
+      "lib/di": ["./app/lib/dependency-injection"]
+    }
+  },
+  "include": ["./**/*.ts", "./**/*.js"],
+  "exclude": ["node_modules", "dist"]
+}
